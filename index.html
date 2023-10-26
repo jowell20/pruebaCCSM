@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/estiloFormulario.css">
+   
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+   
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+
+      
+    
+        <form class="form" style="width: 600px;">
+            <p class="title">Registar Persona </p>
+            
+            <input id="id"  placeholder=""   type="hidden" class="input">
+                <label>
+                    <input id="nombre" required="" placeholder=""  value="jorge ,mememjsdas" type="text" class="input">
+                    <span>Nombre</span>
+                </label>     
+                    
+            <label>
+                <input id="cedula" required="" placeholder=""  value="2132132" type="number" class="input">
+                <span>Cedula</span>
+            </label> 
+                
+            <label>
+                <input id="correo" required="" placeholder="" value="j@gima.com" type="email" class="input">
+                <span>Correo</span>
+            </label>
+        
+            <button type="button" id="agregarPersona" class="submits">Guardar</button>
+            <button type="button" id="editarPersona" class="actualizar">Actualizar</button>
+            </form>
+
+<!-- tabla de personas -->
+<div  style="display: flex; align-items: end; margin-left: 50px;"> 
+<table class="custom-table table table-striped table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th class="header-cell">id</th>
+        <th class="header-cell">Nombre</th>
+        <th class="header-cell">Cedula</th>
+        <th class="header-cell">Correo</th>
+        <th class="header-cell">Opciones</th>
+      </tr>
+    </thead>
+    <tbody id="tablaPersonas">
+      
+      
+    </tbody>
+  </table>
+  
+</div>
+
+</div>
+
+<script src="./assets/js/funciones.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .title {
+    font-size: 28px;
+    color: royalblue;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  
+  .title::before,.title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: royalblue;
+  }
+  
+  .title::before {
+    width: 18px;
+    height: 18px;
+    background-color: royalblue;
+  }
+  
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  
+  .message, .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+  }
+  
+  .signin {
+    text-align: center;
+  }
+  
+  .signin a {
+    color: royalblue;
+  }
+  
+  .signin a:hover {
+    text-decoration: underline royalblue;
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .form label {
+    position: relative;
+  }
+  
+  .form label .input {
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+  
+  .form label .input + span {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: grey;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form label .input:placeholder-shown + span {
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form label .input:focus + span,.form label .input:valid + span {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .form label .input:valid + span {
+    color: green;
+  }
+  
+  .submits {
+    border: none;
+    outline: none;
+    background-color: royalblue;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+  }
+  .actualizar {
+    border: none;
+    outline: none;
+    background-color: rgb(51, 126, 1);
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+  }
+  .submits:hover {
+    background-color: rgb(56, 90, 194);
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+  /* estilos de la tabla */
+ /* Estilos de tabla al estilo de Bootstrap */
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}
+
+.table .table {
+  background-color: #fff;
+}
+
+.table-bordered {
+  border: 1px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid #dee2e6;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-dark {
+  color: #fff;
+  background-color: #343a40;
+}
+
+.table-dark th,
+.table-dark td,
+.table-dark thead th {
+  border-color: #454d55;
+}
+
+/* Estilo de encabezado oscuro para la tabla */
+.table-dark thead th {
+  background-color: #343a40;
+  color: #fff;
+  border-color: #454d55;
+}
+
+/* Estilo de tabla de borde oscuro */
+.table-dark.table-bordered {
+  border: 2px solid #454d55;
+}
+
+/* Estilo de tabla con filas destacadas */
+.table-success, .table-success > th, .table-success > td {
+  background-color: #d4edda;
+}
+
+.table-info, .table-info > th, .table-info > td {
+  background-color: #d1ecf1;
+}
+
+.table-warning, .table-warning > th, .table-warning > td {
+  background-color: #fff3cd;
+}
+
+.table-danger, .table-danger > th, .table-danger > td {
+  background-color: #f8d7da;
+}
+
+/* Estilo de tabla con borde claro */
+.table-light, .table-light > th, .table-light > td {
+  background-color: #fefefe;
+}
+
+/* Estilo de tabla con borde oscuro */
+.table-dark, .table-dark > th, .table-dark > td {
+  background-color: #343a40;
+}
+
+.table-primary, .table-primary > th, .table-primary > td {
+  background-color: #b8daff;
+}
+
+.table-secondary, .table-secondary > th, .table-secondary > td {
+  background-color: #d6d8db;
+}
+
+.table-tertiary, .table-tertiary > th, .table-tertiary > td {
+  background-color: #c8cbcf;
+}
+
+/* Clases de encabezado oscuro para filas */
+.table-dark th {
+  color: #fff;
+  background-color: #343a40;
+}
+
+.table-dark.table-bordered th, .table-dark.table-bordered td {
+  border: 2px solid #454d55;
+}
+.custom-table thead {
+  background-color: royalblue;
+  color: white; /* Para hacer que el texto en el encabezado sea legible en el fondo azul */
+}
